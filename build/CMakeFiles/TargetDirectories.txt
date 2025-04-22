@@ -1,0 +1,3 @@
+/home/ykh/study/Webser/build/CMakeFiles/webserver.dir
+/home/ykh/study/Webser/build/CMakeFiles/edit_cache.dir
+/home/ykh/study/Webser/build/CMakeFiles/rebuild_cache.dir
