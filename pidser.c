@@ -200,7 +200,7 @@ int main() {
     struct epoll_event ev,events[MAX_EVENTS];
     epoll_add(epfd,sockfd);
 
-    // 初始化线程池（线程数 10，最大任务数 128）
+    // 初始化线程池（线程数 1，最大任务数 20）
     threadpool_t* pool = threadpool_create(1, 20);
     assert(pool != NULL);
 
