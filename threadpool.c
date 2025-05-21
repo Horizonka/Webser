@@ -47,7 +47,7 @@ void* thread_worker(void* arg) {
 
         if (task) {//如果任务不为空，则调用任务的函数指针执行任务。
             task->function(task->arg);
-            free(task->arg); // 一定要 free 掉 arg（如果是 malloc 出来的）
+            //free(task->arg); //
             free(task);
         }
     }
@@ -85,6 +85,7 @@ int threadpool_add(threadpool_t* pool, void (*function)(void*), void* arg) {
     if (pool->task_count >= pool->max_tasks) {
         pthread_mutex_unlock(&pool->lock);
         free(task);
+        //pthread_exit(NULL);
         return -1;
     }
 
